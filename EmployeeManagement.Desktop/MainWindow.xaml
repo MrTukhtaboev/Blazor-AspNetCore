@@ -1,0 +1,65 @@
+﻿<Window x:Class="EmployeeManagement.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagement.Desktop"
+        xmlns:component="clr-namespace:EmployeeManagement.Desktop.Components"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <!--<Button Content="Send Message">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="Width" Value="200"/>
+                    <Setter Property="Height" Value="80"/>
+                    <Setter Property="Background" Value="RoyalBlue"/>
+                    <Setter Property="Foreground" Value="Snow"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                                    <ContentPresenter Content="Send Message" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <EventTrigger RoutedEvent="MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation 
+                                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                                    Duration="0:0:0.1" 
+                                                    To="Gold"
+                                                    From="RoyalBlue"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation 
+                                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                                    Duration="0:0:0.1" 
+                                                    To="RoyalBlue"
+                                                    From="Gold"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>-->
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <component:UserInfo Ozgarganda="UserInfo_Ozgarganda" 
+                                Width="240" Height="300"/>
+            <TextBlock x:Name="ResultMessageTxt" Text="No Time" Margin="0 10 0 0" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

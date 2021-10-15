@@ -18,13 +18,6 @@ namespace EmployeeManagement.Web
     {
         public static void Main(string[] args)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:5000/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var Employee = client.GetAsync("api/employee");
-            File.WriteAllText("d:/salom.json", Employee.Result.Content.ReadAsStringAsync().Result);
-
             CreateHostBuilder(args).Build().Run();
         }
 

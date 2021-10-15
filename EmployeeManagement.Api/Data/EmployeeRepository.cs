@@ -37,7 +37,9 @@ namespace EmployeeManagement.Api.Data
 
         public async Task<Employee> GetEmployee(int employeeId)
         {
-            return await _appDbContext.Employees.FirstOrDefaultAsync(e => e.DepartmentId == employeeId);
+            return await _appDbContext.Employees
+                .Include(e => e.Department)
+                .FirstOrDefaultAsync(e => e.DepartmentId == employeeId);
         }
 
         public async Task<Employee> GetEmployeeByEmail(string email)

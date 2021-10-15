@@ -29,7 +29,10 @@ namespace EmployeeManagement.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            //services.AddHttpClient();
+            services.AddHttpClient<IEmployeeService, EmployeeService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7018/");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
